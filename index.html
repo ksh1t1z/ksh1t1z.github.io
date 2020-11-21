@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kshitiz Wagle</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div>
+        <img class="topicon" src="assets/android-chrome-512x512.png">
+    </div>
+    <div class="frame">
+        <div class="partition first">
+            <div class="info">
+                <h1>
+                    <div>Hello,</div>I'm Kshitiz
+                </h1>
+                <a id="age"></a>
+                <div>BCA @ TU</div>
+                <div>
+                    Small talk is hard
+                </div>
+                <script>
+                    x = calculate_age(new Date(2001, 7, 21));
+                    function calculate_age(dob) {
+                        var diff_ms = Date.now() - dob.getTime();
+                        var age_dt = new Date(diff_ms);
+
+                        return Math.abs(age_dt.getUTCFullYear() - 1970);
+                    }
+                    document.getElementById("age").innerHTML = x;
+                </script>
+                </p>
+                <div>
+                    <a href="https://github.com/ksh1t1z" target="_blank"><img class="github"
+                            src="assets/github.png"></a>
+                    <a href="https://twitter.com/kshitizwagle" target="_blank"><img class="twitter"
+                            src="assets/twitter.png" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

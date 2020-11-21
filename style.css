@@ -1,0 +1,51 @@
+body {
+  color: whitesmoke;
+  font-family: "Fira Code";
+  letter-spacing: 0.8px;
+  font-size: 1em;
+  background-color: #1a202c;
+}
+
+.frame{
+  display: flex;
+  border: 2px solid whitesmoke;
+  height: 50vh;
+  width: 80vw;
+  background-color: transparent;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.info{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.twitter, .github{
+  height: 30px;
+  width: 30px;
+}
+
+.topicon{
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+@font-face {
+  font-family: "Fira Code";
+  src: url("fonts/FiraCode-VariableFont_wght.ttf");
+}
+
+::selection{
+  background-color: transparent;
+  color: wheat;
+}
