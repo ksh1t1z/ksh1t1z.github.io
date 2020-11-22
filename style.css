@@ -10,7 +10,7 @@ body {
   display: flex;
   border: 2px solid whitesmoke;
   height: 50vh;
-  width: 80vw;
+  width: 70vw;
   background-color: transparent;
   position: absolute;
   left: 50%;
@@ -35,7 +35,7 @@ body {
   height: 50px;
   width: 50px;
   position: absolute;
-  top: 2%;
+  top: 5%;
   left: 50%;
   transform: translate(-50%);
 }
@@ -48,4 +48,8 @@ body {
 ::selection{
   background-color: transparent;
   color: wheat;
+}
+
+li{
+  list-style: none;
 }
