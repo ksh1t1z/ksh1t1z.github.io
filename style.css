@@ -1,5 +1,5 @@
 body {
-  color: whitesmoke;
+  color: wheat;
   font-family: "Fira Code";
   letter-spacing: 0.8px;
   font-size: 1em;
@@ -47,7 +47,7 @@ body {
 
 ::selection{
   background-color: transparent;
-  color: wheat;
+  color: whitesmoke;
 }
 
 li{
