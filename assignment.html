@@ -1,0 +1,178 @@
+<html>
+
+<head>
+    <title>Assignment</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+
+<body style="text-align: justify;">
+    <style>
+        ::selection {
+            background-color: transparent;
+            color: whitesmoke;
+
+        }
+
+        ::-webkit-scrollbar {
+            background-color: none;
+        }
+
+        ::-webkit-scrollbar-track {
+            color: wheat;
+        }
+
+        body {
+            color: wheat;
+            font-family: 'Fira Code', monospace;
+            font-size: 1em;
+            background-color: #1a202c;
+            margin: 20px;
+        }
+
+        strong {
+            font-size: 17px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    </style>
+    <section>
+        <div class="question1">
+            <div>
+                <h2>Question 1 and 2</h2>
+                <h3>Call By Value</h3>
+                In this method, a copy of the value is passed to the function.
+                Changes made inside the function is limited to the function only and the
+                values of the actual parameters do not change by changing the formal parameters.
+                And in this method, actual and formal arguements are created at different memory location.
+                <pre>
+                <code>
+    /*
+        Created by Kshitiz Wagle.
+        Dec 1, 2020.
+        Swapping two numbers using call in value.
+    */                
+    #include &lt;stdio.h&gt;
+    void swap(int x, int y)
+    {
+        int temp;
+        temp = x;
+        x = y;
+        y = temp;
+        printf("\nIn the function %d %d", x, y);
+    }
+    int main()
+    {
+        int a = 5;
+        int b = 10;
+        printf("\nBefore swap: %d %d", a, b);
+        swap(a, b);
+        printf("\nAfter swap: %d %d", a, b);
+    }
+                </code>
+            </pre>
+                <h4>Output</h4>
+                <pre>
+    Before swap: 5 10
+    In the function: 10 5
+    After swap: 5 10
+            </pre>
+
+            </div>
+            <div>
+                <h3>Call by Reference</h3>
+                In this method, address of variable is passed into the function.
+                The changes made inside the dunction remain outside the function too.
+                The values of the actual parameters also change the formal parameters.
+                The actual and formal arguements are created at the same memory location.
+                <pre>
+                <code>
+    /*
+        Created by Kshitiz Wagle.
+        Dec 1, 2020.
+        Swapping two numbers using call in reference.
+    */   
+    #include &lt;stdio.h&gt;
+        void swap(int *x, int *y)
+        {
+            int temp;
+            temp = *x;
+            *x = *y;
+            *y = temp;
+        }
+        int main()
+        {
+            int a = 5;
+            int b = 10;
+            printf("\nBefore swap: %d %d", a, b);
+            swap(&a, &b);
+            printf("\nAfter swap: %d %d", a, b);
+        }                  
+                </code>
+            </pre>
+                <h4>Output</h4>
+                <pre>
+    Before swap: 5 10
+    After swap: 10 5
+            </pre>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="question3">
+            <div>
+                <h2>Question 3</h2>
+                <p>
+                    There are four types of storage class in C, they are:</p>
+                <ul>
+                    <li>auto</li>
+                    <li>extern</li>
+                    <li>static</li>
+                    <li>register</li>
+                </ul>
+                <p>
+                    <strong>Auto:</strong><br />
+                    This is default storage class for all the variables declared inside a function.
+                    Hencem the keyword is rarely used while programming in C.
+                    Auto variables can only be accessed within the function they have been declared in, though they can
+                    be accessed in nested functions if its declared in the parent nest.
+                    However using pointers can give them global scope. They are assigned a garbage value whenever
+                    they're declared.
+                </p>
+                <p>
+                    <strong>Extern: </strong><br />
+                    This variable is declared outside any function. They can be overwritten inside a function.
+                    It is a global variable which can use used anywhere. It is declared by using the "extern" keyword.
+                    This is used to access the variable at global scope and not declae a global variable.
+                </p>
+                <p>
+                    <strong>Static: </strong><br />
+                    This storage class is very popular in C programming language. Static variable preserve their value
+                    even after they are out of scope. Hence, they preserve the value of their last used scope. They are
+                    initialized only once and exist till the termination of the program. Their scope is local to the
+                    function in which they are declared. Global static variables can be asscesed anywhere in the
+                    program. Theya are assigned the value
+                    0 by compiler.
+                </p>
+                <p>
+                    <strong>Register: </strong><br />
+                    This is similar to auto stoage class, diffeence being it tries to store variable in register instead
+                    of memory in case once of the register is free. If a register is not free, its stores in memory
+                    only. Register variables greatly improves the run time of a program. To be noted that we cannot
+                    obtain the address of a register variable using pointers.
+                </p>
+                <div>
+                    <h5>
+
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
