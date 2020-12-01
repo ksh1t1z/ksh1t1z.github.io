@@ -8,7 +8,7 @@ body {
 
 .frame{
   display: flex;
-  border: 2px solid whitesmoke;
+  border: 2px solid wheat;
   height: 50vh;
   width: 70vw;
   background-color: transparent;
